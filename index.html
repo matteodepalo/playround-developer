@@ -40,7 +40,7 @@ title: Playround Developer
       <h1>Basics</h1>
 
       <section id="intro">
-        <h2>Introduction</h2>
+        <h3>Introduction</h3>
 
         <p>
           The Playround API is organized around REST. Our API is designed to have predictable, resource-oriented URLs and to use HTTP response codes to indicate API errors. We use built-in HTTP features, like HTTP authentication and HTTP verbs, which can be understood by off-the-shelf HTTP clients. JSON will be returned in all responses from the API, including errors.
@@ -48,7 +48,7 @@ title: Playround Developer
       </section>
 
       <section id="authentication">
-        <h2>Authentication</h2>
+        <h3>Authentication</h3>
 
         <p>
           Authentication to the API occurs via HTTP Basic Token Auth. Provide your API key as a header.
@@ -62,7 +62,7 @@ title: Playround Developer
       </section>
 
       <section id="errors">
-        <h2>Errors</h2>
+        <h3>Errors</h3>
 
         <p>
           Sending invalid fields will result in a 422 Unprocessable Entity response, including a json with the errors for the api object fields.
@@ -90,7 +90,7 @@ HTTP/1.1 422 Unprocessable Entity
       </section>
 
       <section id="versioning">
-        <h2>Versioning</h2>
+        <h3>Versioning</h3>
 
         <p>
           Version is specified as a parameter in the url, right after the domain. If you don't specify any version your requests will be redirected to the last one.
@@ -102,7 +102,7 @@ HTTP/1.1 422 Unprocessable Entity
       <h1>API Objects</h1>
 
       <section id="tokens">
-        <h2>Tokens</h2>
+        <h3>Tokens</h3>
         <p>In order to obtain an authentication token you must perform a request to the /tokens endpoint providing a facebook access token.</p>
 
         <div class="panel">
