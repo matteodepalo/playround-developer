@@ -106,8 +106,13 @@ HTTP/1.1 422 Unprocessable Entity
         <p>In order to obtain an authentication token you must perform a request to the /tokens endpoint providing a facebook access token.</p>
 
         <div class="panel">
+          <span class="label">POST</span> /tokens
+        </div>
+
+        <p>Request body</p>
+
+        <div class="panel">
           <pre>
-POST tokens
 {
   "token": { "facebook_access_token": {FB_TOKEN} }
 }
