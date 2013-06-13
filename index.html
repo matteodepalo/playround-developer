@@ -103,7 +103,9 @@ HTTP/1.1 422 Unprocessable Entity
 
       <section id="tokens">
         <h3>Tokens</h3>
-        <p>In order to obtain an authentication token you must perform a request to the /tokens endpoint providing a facebook access token.</p>
+
+        <h4>#create</h4>
+        <p>Creates an api token from a Facebook access token</p>
 
         <div class="panel">
           <span class="label">POST</span> /tokens
@@ -128,7 +130,7 @@ HTTP/1.1 200 Success
 {
   "token": {
     "value":"7744210c42428c387f93630509058fcc",
-    "user":{
+    "user": {
       "id": "28e7b312-2dea-482f-864e-5a2d9dc5dacf",
       "name"=>"Mary Bharambeson",
       "image"=>"http://graph.facebook.com/100006103630429/picture?type=square",
