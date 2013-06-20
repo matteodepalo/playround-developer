@@ -1,0 +1,28 @@
+<section id="users">
+  <h2 data-magellan-destination="users">Users</h2>
+
+  <h4>Show</h4>
+  <p>Get informations about a user</p>
+
+  <div class="panel">
+    <span class="round label">GET</span> /v1/users/:id
+  </div>
+
+  <p>Response</p>
+
+  <div class="panel">
+    <pre>
+HTTP/1.1 200 Success
+
+{
+  "user": {
+    "id":"78f41d76-8419-4f78-b08d-b58446651713",
+    "name":"Test User",
+    "image":"http://graph.facebook.com/123/picture?type=square",
+    "facebook_id":"123",
+    "foursquare_id":"456"
+  }
+}
+    </pre>
+  </div>
+</section>

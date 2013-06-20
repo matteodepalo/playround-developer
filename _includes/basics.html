@@ -1,0 +1,101 @@
+<section id="basics">
+  <h1>Basics</h1>
+
+  <section id="intro">
+    <h2>Introduction</h2>
+
+    <p>
+      The Playround API is organized around REST. Our API is designed to have predictable, resource-oriented URLs and to use HTTP response codes to indicate API errors. We use built-in HTTP features, like HTTP authentication and HTTP verbs, which can be understood by off-the-shelf HTTP clients. JSON will be returned in all responses from the API, including errors.
+    </p>
+  </section>
+
+  <section id="authentication">
+    <h2>Authentication</h2>
+
+    <p>
+      Authentication to the API occurs via HTTP Basic Token Auth. Provide your API key as a header.
+
+      <div class="panel">
+        <pre>$ curl -H "Authorization: TOKEN" https://api.goplayround.com</pre>
+      </div>
+
+      Requests that require authentication will return 401 if the token is not provided
+    </p>
+  </section>
+
+  <section id="errors">
+    <h2>Errors</h2>
+
+    <h3>Validation</h3>
+    <p>
+      Sending invalid fields will result in a 422 Unprocessable Entity response, including a json with the errors for the api object fields.
+
+      Example
+    </p>
+
+    <div class="panel">
+      <pre>$ curl -H "Authorization: {TOKEN}" https://api.goplayround.com/v1/rounds -d ""</pre>
+    </div>
+
+    <div class="panel">
+      <pre>
+HTTP/1.1 422 Unprocessable Entity
+
+{
+  "errors": {
+    "game_id":["can't be blank"],
+    "user_id":["can't be blank"],
+    "arena_id":["can't be blank"]
+  }
+}
+      </pre>
+    </div>
+
+    <h3>Unauthorized</h3>
+
+    <p>
+      Some requests require authentication and they will be marked in the documentation with the <span class="round alert label">Authentication</span> label.<br/>
+      If an authentication token is not provided the server will respond with the 401 status code and the following body
+
+      <div class="panel">
+        <pre>"HTTP Token: Access denied.\n"</pre>
+      </div>
+    </p>
+
+    <h3>Forbidden</h3>
+
+    <p>
+      Some requests require authorization. For example only the round creator can use the PATCH /rounds/:id endpoint. Requests requiring authorization will be marked with the <span class="round secondary label">Authorization</span> label along with a list of users who can access that endpoint.<br/>
+      If the current user is not authorized to perform that request the server will respond with the 403 status code and no body.
+    </p>
+  </section>
+
+  <section id="versioning">
+    <h2>Versioning</h2>
+
+    <p>
+      Version is specified as a parameter in the url, right after the domain. For example:
+
+      <div class="panel">
+        <span class="round label">GET</span> /v1/users/me
+      </div>
+
+      If you don't specify any version your requests will be redirected to the last one.
+    </p>
+  </section>
+
+  <section id="current-user">
+    <h2>Current User</h2>
+
+    <p>
+      All the endpoints with the parameter :user_id and :id in /users/:id can have that parameter replaced with "me". For example:
+
+      <div class="panel">
+        <span class="round label">GET</span> /v1/users/me/buddies
+      </div>
+
+      Any action performed with "me" instead of the Playround :user_id will be performed on the current user. In the example above we were accessing current user's buddies.<br/>
+      These kind of requests will always need a token.
+    </p>
+  </section>
+</section>

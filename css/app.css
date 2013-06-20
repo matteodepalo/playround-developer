@@ -7046,3 +7046,13 @@ a.th {
 }
 
 /* Literal.Number.Integer.Long */
+/* line 51, ../sass/app.scss */
+ul {
+  margin-top: 10px;
+  margin-left: 18px;
+}
+
+/* line 57, ../sass/app.scss */
+table .panel {
+  margin-top: 10px;
+}

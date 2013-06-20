@@ -36,67 +36,7 @@ title: Playround Developer
   </div>
 
   <div class="large-9 columns">
-    <section id="basics">
-      <h1>Basics</h1>
-
-      <section id="intro">
-        <h2>Introduction</h2>
-
-        <p>
-          The Playround API is organized around REST. Our API is designed to have predictable, resource-oriented URLs and to use HTTP response codes to indicate API errors. We use built-in HTTP features, like HTTP authentication and HTTP verbs, which can be understood by off-the-shelf HTTP clients. JSON will be returned in all responses from the API, including errors.
-        </p>
-      </section>
-
-      <section id="authentication">
-        <h2>Authentication</h2>
-
-        <p>
-          Authentication to the API occurs via HTTP Basic Token Auth. Provide your API key as a header.
-
-          <div class="panel">
-            <pre>$ curl -H "Authorization: {TOKEN}" https://api.goplayround.com</pre>
-          </div>
-
-          Requests that require authentication will return 401 if the token is not provided
-        </p>
-      </section>
-
-      <section id="errors">
-        <h2>Errors</h2>
-
-        <p>
-          Sending invalid fields will result in a 422 Unprocessable Entity response, including a json with the errors for the api object fields.
-
-          Example
-        </p>
-
-        <div class="panel">
-          <pre>$ curl -H "Authorization: {TOKEN}" https://api.goplayround.com/v1/rounds -d ""</pre>
-        </div>
-
-        <div class="panel">
-          <pre>
-HTTP/1.1 422 Unprocessable Entity
-
-{
-  "errors": {
-    "game_id":["can't be blank"],
-    "user_id":["can't be blank"],
-    "arena_id":["can't be blank"]
-  }
-}
-          </pre>
-        </div>
-      </section>
-
-      <section id="versioning">
-        <h2>Versioning</h2>
-
-        <p>
-          Version is specified as a parameter in the url, right after the domain. If you don't specify any version your requests will be redirected to the last one.
-        </p>
-      </section>
-    </section>
+    {% include basics.html %}
 
     <hr/>
 
@@ -106,52 +46,22 @@ HTTP/1.1 422 Unprocessable Entity
       <div data-magellan-expedition="fixed">
         <dl class="sub-nav">
           <dd data-magellan-arrival="tokens" class="active"><a href="#tokens">Tokens</a></dd>
+          <dd data-magellan-arrival="users"><a href="#users">Users</a></dd>
+          <dd data-magellan-arrival="rounds"><a href="#rounds">Rounds</a></dd>
+          <dd data-magellan-arrival="games"><a href="#games">Games</a></dd>
+          <dd data-magellan-arrival="arenas"><a href="#arenas">Arenas</a></dd>
+          <dd data-magellan-arrival="participations"><a href="#participations">Participations</a></dd>
+          <dd data-magellan-arrival="buddies"><a href="#buddies">Buddies</a></dd>
         </dl>
       </div>
 
-      <section id="tokens">
-        <h2 data-magellan-destination="tokens">Tokens</h2>
-
-        <h4>Create</h4>
-        <p>Creates an api token from a Facebook access token</p>
-
-        <div class="panel">
-          <span class="label">POST</span> /tokens
-        </div>
-
-        <p>Request body</p>
-
-        <div class="panel">
-          <pre>
-{
-  "token": { "facebook_access_token": {FB_TOKEN} }
-}
-          </pre>
-        </div>
-
-        <p>Response</p>
-
-        <div class="panel">
-          <pre>
-HTTP/1.1 200 Success
-
-{
-  "token": {
-    "value":"7744210c42428c387f93630509058fcc",
-    "user": {
-      "id": "28e7b312-2dea-482f-864e-5a2d9dc5dacf",
-      "name"=>"Mary Bharambeson",
-      "image"=>"http://graph.facebook.com/100006103630429/picture?type=square",
-      "facebook_id"=>"100006103630429",
-      "foursquare_id"=>nil,
-      "email":
-      "akmdchh_bharambeson_1371063599@tfbnw.net"
-    }
-  }
-}
-          </pre>
-        </div>
-      </section>
+      {% include tokens.html %}
+      {% include users.html %}
+      {% include rounds.html %}
+      {% include games.html %}
+      {% include arenas.html %}
+      {% include participations.html %}
+      {% include buddies.html %}
     </section>
   </div>
 </div>

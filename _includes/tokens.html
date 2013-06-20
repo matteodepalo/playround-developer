@@ -1,0 +1,60 @@
+<section id="tokens">
+  <h2 data-magellan-destination="tokens">Tokens</h2>
+
+  <h4>Create</h4>
+  <p>Creates an api token from a Facebook access token. You can then use the api token returned to authenticate, passing it like described above in the basics authentication section</p>
+
+  <div class="panel">
+    <span class="round label">POST</span> /v1/tokens
+  </div>
+
+  <p>Parameters</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Parameter</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="secondary label">facebook_access_token</span></td>
+        <td>The Facebook access token</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4>Example</h4>
+
+  <p>Request body</p>
+
+  <div class="panel">
+    <pre>
+{ "token": { "facebook_access_token": FB_TOKEN } }
+    </pre>
+  </div>
+
+  <p>Response</p>
+
+  <div class="panel">
+    <pre>
+HTTP/1.1 200 Success
+
+{
+  "token": {
+    "value":"7744210c42428c387f93630509058fcc",
+    "user": {
+      "id": "28e7b312-2dea-482f-864e-5a2d9dc5dacf",
+      "name"=>"Mary Bharambeson",
+      "image"=>"http://graph.facebook.com/100006103630429/picture?type=square",
+      "facebook_id"=>"100006103630429",
+      "foursquare_id"=>nil,
+      "email":
+      "akmdchh_bharambeson_1371063599@tfbnw.net"
+    }
+  }
+}
+    </pre>
+  </div>
+</section>

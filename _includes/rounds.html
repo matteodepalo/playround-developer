@@ -1,0 +1,174 @@
+<section id="rounds">
+  <h2 data-magellan-destination="rounds">Rounds</h2>
+
+  <h4>Show</h4>
+  <p>Get informations about a round</p>
+
+  <div class="panel">
+    <span class="round label">GET</span> /v1/rounds/:id
+  </div>
+
+  <p>Response</p>
+
+  <div class="panel">
+    <pre>
+HTTP/1.1 200 Success
+
+{
+  "round":{
+    "id":"ae28daa4-0a71-4d62-a29b-50cf498f860b",
+    "state":"waiting_for_players",
+    "game":{
+      "id":"8a050130-6c26-4079-bf73-43bba8abd42d",
+      "name":"dota2",
+      "display_name":"Dota 2",
+      "image_url":"http://localhost:8080/assets/dota2.jpg",
+      "number_of_teams":2
+    },
+    "participations":[],
+    "arena":{
+      "id":"cbdb5137-0111-4eae-b69a-7da34176c6a6",
+      "name":"Clinton St. Baking Co. u0026 Restaurant",
+      "latitude":40.721294,
+      "longitude":-73.983994,
+      "foursquare_id":"5104"
+    }
+  }
+}
+    </pre>
+  </div>
+
+  <h4>Create</h4>
+  <p>Starts a new round</p>
+
+  <div class="panel">
+    <span class="round alert label">Authentication</span>
+    <span class="round label">POST</span> /v1/rounds
+  </div>
+
+  <p>Parameters</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Parameter</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="secondary label">game_name</span></td>
+        <td>The round's game. It can be among these:
+          <ul>
+            <li>dota2</li>
+            <li>go</li>
+            <li>table_football</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr>
+        <td><span class="secondary label">arena_properties</span></td>
+        <td>
+          Dictionary containing the properties of the arena which can be either the foursquare_id or the location coordinates:
+          <div class="panel">
+            <pre>
+{ foursquare_id": "5104" }
+{ "latitude": 30, "longitude": 50 }
+            </pre>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td><span class="secondary label">participation_list</span></td>
+        <td>
+          Dictionary containing the "team" and "user" properties.
+
+          <ul>
+            <li>"team" is used to decide which team the user will join; if none is provided it will be automatically assigned to the first one avaiable. See the description of games to know which teams you can use.</li>
+            <li>"user" can contain the Playround id of the user or the facebook_id of a unregistered user, who will then be imported into Playround.</li>
+          </ul>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4>Example</h4>
+
+  <p>Request body</p>
+
+  <div class="panel">
+    <pre>
+{
+  "round": {
+    "game_name": "dota2",
+    "arena_properties": { "foursquare_id": "5104" },
+    "participation_list": [
+      {
+        "team": "dire",
+        "user": { "id": "89546413-c23f-4e64-9249-c8007bded2d9" }
+      },
+      {
+        "user": { "facebook_id": "123" }
+      }
+    ]
+  }
+}
+    </pre>
+  </div>
+
+  <p>Response</p>
+
+  <div class="panel">
+    <pre>
+HTTP/1.1 201 Created
+
+{
+  "round": {
+    "id": "599836cb-bda6-4ef4-b442-26fb2076ca23",
+    "state": "waiting_for_players",
+    "game": {
+      "id": "7452feb2-d3fc-47c6-bc23-255ed653f1d7",
+      "name": "dota2",
+      "display_name": "Dota 2",
+      "image_url": "http://localhost:8080/assets/dota2.jpg",
+      "number_of_teams": 2
+    },
+    "participations": [
+      {
+        "joined": false,
+        "team": "dire",
+        "user": {
+          "id": "89546413-c23f-4e64-9249-c8007bded2d9",
+          "name": "Test User",
+          "image": "http://graph.facebook.com/123/picture?type=square",
+          "facebook_id": "123",
+          "foursquare_id": "456"
+        }
+      },
+      {
+        "joined": false,
+        "team": "radiant",
+        "user": {
+          "id": "6ce700f7-dbc9-438d-93a7-6a41ef0782e4",
+          "name": "Test User",
+          "image": "http://graph.facebook.com/123/picture?type=square",
+          "facebook_id": "123",
+          "foursquare_id": "456"
+        }
+      }
+    ],
+    "arena": {
+      "id": "e13291f4-2c57-4399-bc14-0f1dcc81ddfa",
+      "name": "Clinton St. Baking Co. & Restaurant",
+      "latitude": 40.721294,
+      "longitude": -73.983994,
+      "foursquare_id": "5104"
+    }
+  }
+}
+    </pre>
+  </div>
+</section>
