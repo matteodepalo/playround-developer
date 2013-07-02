@@ -4,13 +4,13 @@
   <h4>Show</h4>
   <p>Get informations about a round</p>
 
-  <div class="panel">
-    <span class="round label">GET</span> /v1/rounds/:id
+  <div class="endpoint">
+    <span class="http-verb">GET</span> /v1/rounds/:id
   </div>
 
   <p>Response</p>
 
-  <div class="panel">
+  <div class="code">
     <pre>
 HTTP/1.1 200 Success
 
@@ -41,9 +41,9 @@ HTTP/1.1 200 Success
   <h4>Create</h4>
   <p>Starts a new round</p>
 
-  <div class="panel">
-    <span class="round alert label">Authentication</span>
-    <span class="round label">POST</span> /v1/rounds
+  <div class="endpoint">
+    <span class="authentication">Authentication</span>
+    <span class="http-verb">POST</span> /v1/rounds
   </div>
 
   <p>Parameters</p>
@@ -57,7 +57,7 @@ HTTP/1.1 200 Success
     </thead>
     <tbody>
       <tr>
-        <td><span class="secondary label">game_name</span></td>
+        <td><span class="parameter">game_name</span></td>
         <td>The round's game. It can be among these:
           <ul>
             <li>dota2</li>
@@ -68,10 +68,10 @@ HTTP/1.1 200 Success
       </tr>
 
       <tr>
-        <td><span class="secondary label">arena_properties</span></td>
+        <td><span class="parameter">arena_properties</span></td>
         <td>
           Dictionary containing the properties of the arena which can be either the foursquare_id or the location coordinates:
-          <div class="panel">
+          <div class="code">
             <pre>
 { foursquare_id": "5104" }
 { "latitude": 30, "longitude": 50 }
@@ -81,7 +81,7 @@ HTTP/1.1 200 Success
       </tr>
 
       <tr>
-        <td><span class="secondary label">participation_list</span></td>
+        <td><span class="parameter">participation_list</span></td>
         <td>
           Dictionary containing the "team" and "user" properties.
 
@@ -99,7 +99,7 @@ HTTP/1.1 200 Success
 
   <p>Request body</p>
 
-  <div class="panel">
+  <div class="code">
     <pre>
 {
   "round": {
@@ -121,7 +121,7 @@ HTTP/1.1 200 Success
 
   <p>Response</p>
 
-  <div class="panel">
+  <div class="code">
     <pre>
 HTTP/1.1 201 Created
 

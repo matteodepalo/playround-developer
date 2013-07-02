@@ -4,8 +4,8 @@
   <h4>Create</h4>
   <p>Creates an api token from a Facebook access token. You can then use the api token returned to authenticate, passing it like described above in the basics authentication section</p>
 
-  <div class="panel">
-    <span class="round label">POST</span> /v1/tokens
+  <div class="endpoint">
+    <span class="http-verb">POST</span> /v1/tokens
   </div>
 
   <p>Parameters</p>
@@ -19,8 +19,11 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="secondary label">facebook_access_token</span></td>
-        <td>The Facebook access token</td>
+        <td><span class="parameter">token</span></td>
+        <td>
+          A dictionary containing the Facebook access token
+          <div class="code"><pre>{ "facebook_access_token": FB_TOKEN }</pre></div>
+        </td>
       </tr>
     </tbody>
   </table>
@@ -29,7 +32,7 @@
 
   <p>Request body</p>
 
-  <div class="panel">
+  <div class="code">
     <pre>
 { "token": { "facebook_access_token": FB_TOKEN } }
     </pre>
@@ -37,7 +40,7 @@
 
   <p>Response</p>
 
-  <div class="panel">
+  <div class="code">
     <pre>
 HTTP/1.1 200 Success
 

@@ -15,7 +15,7 @@
     <p>
       Authentication to the API occurs via HTTP Basic Token Auth. Provide your API key as a header.
 
-      <div class="panel">
+      <div class="code">
         <pre>$ curl -H "HTTP_AUTHORIZATION: Token token=\"TOKEN\"" https://api.goplayround.com</pre>
       </div>
 
@@ -33,11 +33,11 @@
       Example
     </p>
 
-    <div class="panel">
+    <div class="code">
       <pre>$ curl -H "Authorization: {TOKEN}" https://api.goplayround.com/v1/rounds -d ""</pre>
     </div>
 
-    <div class="panel">
+    <div class="code">
       <pre>
 HTTP/1.1 422 Unprocessable Entity
 
@@ -56,11 +56,25 @@ HTTP/1.1 422 Unprocessable Entity
     <p>
       Some requests require authentication and they will be marked in the documentation with the <span class="round alert label">Authentication</span> label.<br/>
       If an authentication token is not provided the server will respond with the 401 status code and the following body
-
-      <div class="panel">
-        <pre>"HTTP Token: Access denied.\n"</pre>
-      </div>
     </p>
+
+    <div class="code">
+      <pre>
+{
+  "error": "You did not provide a Token."
+}
+      </pre>
+    </div>
+
+    <p>If an invalid token is provided the body is:</p>
+
+    <div class="code">
+      <pre>
+{
+  "error": "Invalid Token provided: TOKEN"
+}
+      </pre>
+    </div>
 
     <h3>Forbidden</h3>
 
@@ -76,8 +90,8 @@ HTTP/1.1 422 Unprocessable Entity
     <p>
       Version is specified as a parameter in the url, right after the domain. For example:
 
-      <div class="panel">
-        <span class="round label">GET</span> /v1/users/me
+      <div class="endpoint">
+        <span class="http-verb">GET</span> /v1/users/:user_id
       </div>
 
       If you don't specify any version your requests will be redirected to the last one.
@@ -88,14 +102,16 @@ HTTP/1.1 422 Unprocessable Entity
     <h2>Current User</h2>
 
     <p>
-      All the endpoints with the parameter :user_id and :id in /users/:id can have that parameter replaced with "me". For example:
+      All the endpoints with the parameter :user_id and :id in /users/:id (that is users nested routes) can have that parameter replaced with "me". For example:
+    </p>
 
-      <div class="panel">
-        <span class="round label">GET</span> /v1/users/me/buddies
+      <div class="endpoint">
+        <span class="http-verb">GET</span> /v1/users/me/buddies
       </div>
 
-      Any action performed with "me" instead of the Playround :user_id will be performed on the current user. In the example above we were accessing current user's buddies.<br/>
-      These kind of requests will always need a token.
+    <p>
+      Any action performed with "me" instead of the Playround :user_id will be performed on the current user. In the example above we are accessing the current user's buddies.<br/>
+      These kind of requests will always need authentication.
     </p>
   </section>
 </section>

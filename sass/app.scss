@@ -54,7 +54,23 @@ ul {
 }
 
 table {
-  .panel {
+  .code {
     margin-top: 10px;
   }
+}
+
+.http-verb {
+  @include label($radius: 1000px);
+}
+
+.authentication {
+  @include label($radius: 1000px, $bg: $alert-color);
+}
+
+.parameter {
+  @include label($bg: $secondary-color);
+}
+
+.code, .endpoint {
+  @include panel;
 }
