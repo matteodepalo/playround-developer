@@ -59,8 +59,20 @@ table {
   }
 }
 
-.http-verb {
+.get {
   @include label($radius: 1000px);
+}
+
+.post {
+  @include label($radius: 1000px, $bg: $success-color);
+}
+
+.delete {
+  @include label($radius: 1000px, $bg: $alert-color);
+}
+
+.patch {
+  @include label($radius: 1000px, $bg: $alert-color);
 }
 
 .authentication {
