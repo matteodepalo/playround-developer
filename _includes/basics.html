@@ -54,7 +54,7 @@ HTTP/1.1 422 Unprocessable Entity
     <h3>Unauthorized</h3>
 
     <p>
-      Some requests require authentication and they will be marked in the documentation with the <span class="round alert label">Authentication</span> label.<br/>
+      Some requests require authentication and they will be marked in the documentation with the <span class="authentication">Authentication</span> label.<br/>
       If an authentication token is not provided the server will respond with the 401 status code and the following body
     </p>
 
@@ -79,7 +79,7 @@ HTTP/1.1 422 Unprocessable Entity
     <h3>Forbidden</h3>
 
     <p>
-      Some requests require authorization. For example only the round creator can use the PATCH /rounds/:id endpoint. Requests requiring authorization will be marked with the <span class="round secondary label">Authorization</span> label along with a list of users who can access that endpoint.<br/>
+      Some requests require authorization. For example only the round creator can use the PATCH /rounds/:id endpoint. Requests requiring authorization will be marked with the <span class="authorization">Authorization</span> label along with a list of users who can access that endpoint.<br/>
       If the current user is not authorized to perform that request the server will respond with the 403 status code and no body.
     </p>
   </section>

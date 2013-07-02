@@ -39,10 +39,13 @@ HTTP/1.1 200 Success
   </div>
 
   <h4>Create</h4>
-  <p>Starts a new round</p>
+  <p>
+    Starts a new round.<br/>
+
+    Requires <span class="authentication">Authentication</span>.<br/>
+  </p>
 
   <div class="endpoint">
-    <span class="authentication">Authentication</span>
     <span class="post">POST</span> /v1/rounds
   </div>
 
@@ -95,7 +98,7 @@ HTTP/1.1 200 Success
     </tbody>
   </table>
 
-  <h4>Example</h4>
+  <h5>Example</h5>
 
   <p>Request body:</p>
 
@@ -169,6 +172,102 @@ HTTP/1.1 201 Created
     ],
     "arena": {
       "id": "8d4b8f61-72bb-4d14-8a6d-b8f5db289777",
+      "name": "Clinton St. Baking Co. & Restaurant",
+      "latitude": 40.721294,
+      "longitude": -73.983994,
+      "foursquare_id": "5104"
+    }
+  }
+}
+    </pre>
+  </div>
+
+  <h4>Invalid attributes</h4>
+
+  <p>Posting invalid attributes will result in a response with status 422 and a body containing the errors relative to invalid fields</p>
+
+  <h5>Example</h5>
+
+  <p>Request body:</p>
+
+  <div class="code">
+    <pre>
+{
+  "round": {
+    "game_name": "lol"
+  }
+}
+    </pre>
+  </div>
+
+  <p>Response:</p>
+
+  <div class="code">
+    <pre>
+HTTP/1.1 422 Unprocessable Entity
+
+{
+  "errors": {
+    "game_id": [
+      "can't be blank"
+    ],
+    "arena_id": [
+      "can't be blank"
+    ],
+    "base": [
+      "game_name must be among: dota2, table_football, go"
+    ]
+  }
+}
+    </pre>
+  </div>
+
+  <h4>Delete</h4>
+  <p>
+    Deletes a round.
+
+    Requires <span class="authentication">Authentication</span> and <span class="authorization">Authorization</span>.<br/>
+
+    Only the creator of the round can delete it.
+  </p>
+
+  <div class="endpoint">
+    <span class="delete">DELETE</span> /v1/rounds/:round_id
+  </div>
+
+  <h5>Example</h5>
+
+  <p>Response:</p>
+
+  <div class="code">
+    <pre>
+HTTP/1.1 200 Success
+
+{
+  "round": {
+    "id": "2daf4670-a41c-4a78-aa52-7a63b25f10e5",
+    "state": "waiting_for_players",
+    "game": {
+      "id": "4c9384a8-aa77-415b-bff7-9fcb5ec3231e",
+      "name": "dota2",
+      "display_name": "Dota 2",
+      "image_url": "http://localhost:8080/assets/dota2.jpg",
+      "teams": [
+        {
+          "name": "radiant",
+          "display_name": "Radiant",
+          "number_of_players": 5
+        },
+        {
+          "name": "dire",
+          "display_name": "Dire",
+          "number_of_players": 5
+        }
+      ]
+    },
+    "participations": [],
+    "arena": {
+      "id": "7a4f2962-ceb7-4f49-85bd-e34c306206ca",
       "name": "Clinton St. Baking Co. & Restaurant",
       "latitude": 40.721294,
       "longitude": -73.983994,

@@ -79,6 +79,10 @@ table {
   @include label($radius: 1000px, $bg: $alert-color);
 }
 
+.authorization {
+  @include label($radius: 1000px, $bg: $secondary-color);
+}
+
 .parameter {
   @include label($bg: $secondary-color);
 }
