@@ -433,7 +433,7 @@ body {
   color: #222222;
   padding: 0;
   margin: 0;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Whitney SSm A", "Whitney SSm B";
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -2037,7 +2037,7 @@ p aside {
 /* Default header styles */
 /* line 181, ../../../../.rvm/rubies/ruby-1.9.3-p286/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.2.2/scss/foundation/components/_type.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Whitney A", "Whitney B";
   font-weight: bold;
   font-style: normal;
   color: #222222;
@@ -7046,18 +7046,18 @@ a.th {
 }
 
 /* Literal.Number.Integer.Long */
-/* line 51, ../sass/app.scss */
+/* line 54, ../sass/app.scss */
 ul {
   margin-top: 10px;
   margin-left: 18px;
 }
 
-/* line 57, ../sass/app.scss */
+/* line 60, ../sass/app.scss */
 table .code {
   margin-top: 10px;
 }
 
-/* line 62, ../sass/app.scss */
+/* line 65, ../sass/app.scss */
 .http-verb {
   font-weight: bold;
   text-align: center;
@@ -7074,7 +7074,7 @@ table .code {
   border-radius: 1000px;
 }
 
-/* line 66, ../sass/app.scss */
+/* line 69, ../sass/app.scss */
 .authentication {
   font-weight: bold;
   text-align: center;
@@ -7091,7 +7091,7 @@ table .code {
   border-radius: 1000px;
 }
 
-/* line 70, ../sass/app.scss */
+/* line 73, ../sass/app.scss */
 .parameter {
   font-weight: bold;
   text-align: center;
@@ -7106,7 +7106,7 @@ table .code {
   color: #333333;
 }
 
-/* line 74, ../sass/app.scss */
+/* line 77, ../sass/app.scss */
 .code, .endpoint {
   border-style: solid;
   border-width: 1px;
@@ -7137,7 +7137,7 @@ table .code {
   line-height: 1.4;
 }
 
-/* line 78, ../sass/app.scss */
+/* line 81, ../sass/app.scss */
 .code {
   font-size: 0.875em;
   word-wrap: break-word;
