@@ -7136,3 +7136,9 @@ table .code {
 .code h1.subheader, .code h2.subheader, .code h3.subheader, .code h4.subheader, .code h5.subheader, .code h6.subheader, .endpoint h1.subheader, .endpoint h2.subheader, .endpoint h3.subheader, .endpoint h4.subheader, .endpoint h5.subheader, .endpoint h6.subheader {
   line-height: 1.4;
 }
+
+/* line 78, ../sass/app.scss */
+.code {
+  font-size: 0.875em;
+  word-wrap: break-word;
+}

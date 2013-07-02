@@ -74,3 +74,8 @@ table {
 .code, .endpoint {
   @include panel;
 }
+
+.code {
+  font-size: emCalc(14px);
+  word-wrap: break-word;
+}
