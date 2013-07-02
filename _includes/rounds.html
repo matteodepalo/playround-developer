@@ -108,11 +108,9 @@ HTTP/1.1 200 Success
     "participation_list": [
       {
         "team": "dire",
-        "user": { "id": "89546413-c23f-4e64-9249-c8007bded2d9" }
+        "user": { "id": "30972d08-03a5-40c9-930c-4f5bbddba674" }
       },
-      {
-        "user": { "facebook_id": "123" }
-      }
+      { "user": { "facebook_id": "100002734755203"} }
     ]
   }
 }
@@ -127,41 +125,50 @@ HTTP/1.1 201 Created
 
 {
   "round": {
-    "id": "599836cb-bda6-4ef4-b442-26fb2076ca23",
+    "id": "4d49cc3b-d55a-4098-8450-73861b504a9b",
     "state": "waiting_for_players",
     "game": {
-      "id": "7452feb2-d3fc-47c6-bc23-255ed653f1d7",
+      "id": "53bfbf84-d3b3-48fa-9857-9545213a797f",
       "name": "dota2",
       "display_name": "Dota 2",
       "image_url": "http://localhost:8080/assets/dota2.jpg",
-      "number_of_teams": 2
+      "teams": [
+        {
+          "name": "radiant",
+          "display_name": "Radiant",
+          "number_of_players": 5
+        },
+        {
+          "name": "dire",
+          "display_name": "Dire",
+          "number_of_players": 5
+        }
+      ]
     },
     "participations": [
       {
         "joined": false,
         "team": "dire",
         "user": {
-          "id": "89546413-c23f-4e64-9249-c8007bded2d9",
-          "name": "Test User",
-          "image": "http://graph.facebook.com/123/picture?type=square",
-          "facebook_id": "123",
-          "foursquare_id": "456"
+            "id": "c0731481-35d0-47c1-ab84-c0c7b0bef10c",
+            "name": "Test User",
+            "image": "http://graph.facebook.com/1252/picture?type=square",
+            "facebook_id": "1252"
         }
       },
       {
         "joined": false,
         "team": "radiant",
         "user": {
-          "id": "6ce700f7-dbc9-438d-93a7-6a41ef0782e4",
-          "name": "Test User",
-          "image": "http://graph.facebook.com/123/picture?type=square",
-          "facebook_id": "123",
-          "foursquare_id": "456"
+            "id": "36e8699c-bf95-4598-9c63-e857df16ef06",
+            "name": "Matteo Depalo",
+            "image": "http://graph.facebook.com/100002734755203/picture?type=square",
+            "facebook_id": "100002734755203"
         }
       }
     ],
     "arena": {
-      "id": "e13291f4-2c57-4399-bc14-0f1dcc81ddfa",
+      "id": "8d4b8f61-72bb-4d14-8a6d-b8f5db289777",
       "name": "Clinton St. Baking Co. & Restaurant",
       "latitude": 40.721294,
       "longitude": -73.983994,
