@@ -148,8 +148,8 @@ $default-float: left;
 // Heading font sizes
 
 // $h1-font-size: emCalc(44px);
-// $h2-font-size: emCalc(37px);
-// $h3-font-size: emCalc(27px);
+$h2-font-size: emCalc(32px);
+$h3-font-size: emCalc(21px);
 // $h4-font-size: emCalc(23px);
 // $h5-font-size: emCalc(18px);
 // $h6-font-size: 1em;
@@ -171,7 +171,7 @@ $default-float: left;
 
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: normal;
-// $paragraph-font-size: 1em;
+$paragraph-font-size: emCalc(14px);
 // $paragraph-line-height: 1.6;
 // $paragraph-margin-bottom: emCalc(20px);
 // $paragraph-aside-font-size: emCalc(14px);
