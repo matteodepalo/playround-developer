@@ -86,11 +86,11 @@ HTTP/1.1 200 Success
       <tr>
         <td><span class="parameter">participation_list</span></td>
         <td>
-          Dictionary containing the "team" and "user" properties.
+          Array of dictionaries containing the "team" and "user" properties.
 
           <ul>
             <li>"team" is used to decide which team the user will join; if none is provided it will be automatically assigned to the first one avaiable. See the description of games to know which teams you can use.</li>
-            <li>"user" can contain the Playround id of the user or the facebook_id of a unregistered user, who will then be imported into Playround.</li>
+            <li>"user" can contain the Playround id of the user or the facebook_id of a unregistered user, who will be imported into Playround.</li>
           </ul>
 
         </td>
