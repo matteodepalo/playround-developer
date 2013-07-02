@@ -5756,7 +5756,7 @@ kbd {
   display: inline-block;
   position: relative;
   padding: 0.21429em 0.71429em 0.28571em;
-  font-size: 1em;
+  font-size: 0.85714em;
   background-color: #0a67a3;
   color: white;
 }
@@ -7067,7 +7067,7 @@ table .code {
   display: inline-block;
   position: relative;
   padding: 0.21429em 0.71429em 0.28571em;
-  font-size: 1em;
+  font-size: 0.85714em;
   background-color: #0a67a3;
   color: white;
   -webkit-border-radius: 1000px;
@@ -7084,7 +7084,7 @@ table .code {
   display: inline-block;
   position: relative;
   padding: 0.21429em 0.71429em 0.28571em;
-  font-size: 1em;
+  font-size: 0.85714em;
   background-color: #00b25c;
   color: white;
   -webkit-border-radius: 1000px;
@@ -7101,7 +7101,7 @@ table .code {
   display: inline-block;
   position: relative;
   padding: 0.21429em 0.71429em 0.28571em;
-  font-size: 1em;
+  font-size: 0.85714em;
   background-color: #ff4100;
   color: white;
   -webkit-border-radius: 1000px;
@@ -7118,7 +7118,7 @@ table .code {
   display: inline-block;
   position: relative;
   padding: 0.21429em 0.71429em 0.28571em;
-  font-size: 1em;
+  font-size: 0.85714em;
   background-color: #ff4100;
   color: white;
   -webkit-border-radius: 1000px;
@@ -7135,7 +7135,7 @@ table .code {
   display: inline-block;
   position: relative;
   padding: 0.21429em 0.71429em 0.28571em;
-  font-size: 1em;
+  font-size: 0.85714em;
   background-color: #ff4100;
   color: white;
   -webkit-border-radius: 1000px;
@@ -7152,7 +7152,7 @@ table .code {
   display: inline-block;
   position: relative;
   padding: 0.21429em 0.71429em 0.28571em;
-  font-size: 1em;
+  font-size: 0.85714em;
   background-color: #e9e9e9;
   color: #333333;
   -webkit-border-radius: 1000px;
@@ -7169,7 +7169,7 @@ table .code {
   display: inline-block;
   position: relative;
   padding: 0.21429em 0.71429em 0.28571em;
-  font-size: 1em;
+  font-size: 0.85714em;
   background-color: #e9e9e9;
   color: #333333;
 }
