@@ -1,0 +1,97 @@
+<section id="buddies">
+  <h2 data-magellan-destination="buddies">Buddies</h2>
+
+  <h4>Index</h4>
+  <p>Get the list of user's buddies</p>
+
+  <div class="endpoint">
+    <span class="get">GET</span> /v1/users/:user_id/buddies
+  </div>
+
+  <h5>Example</h5>
+
+  <p>Response:</p>
+
+  <div class="code">
+    <pre>
+HTTP/1.1 200 Success
+
+{
+  "buddies": [
+    {
+      "id": "cfa8fced-d69b-48f3-b916-4898c49a485c",
+      "name": "Test User",
+      "image": "http://graph.facebook.com/1256/picture?type=square",
+      "facebook_id": "1256"
+    },
+    {
+      "id": "75a84524-723b-4c8d-8602-3b4024adf14e",
+      "name": "Test User",
+      "image": "http://graph.facebook.com/1257/picture?type=square",
+      "facebook_id": "1257"
+    },
+    {
+      "id": "f7d2af56-ae31-4050-97eb-d3f492d5fcc9",
+      "name": "Test User",
+      "image": "http://graph.facebook.com/1258/picture?type=square",
+      "facebook_id": "1258"
+    }
+  ]
+}
+    </pre>
+  </div>
+
+  <h4>Create</h4>
+  <p>
+    Adds a user to the list of current user's buddies.<br/>
+    Requires <span class="authentication">Authentication</span>.
+  </p>
+
+  <div class="endpoint">
+    <span class="post">POST</span> /v1/users/me/buddies
+  </div>
+
+  <h5>Example</h5>
+
+  <p>Request body:</p>
+
+  <div class="code">
+    <pre>
+{
+  "buddies": [
+    {
+      "facebook_id": "100002734755203"
+    },
+    {
+      "facebook_id": "100002950674984"
+    }
+  ]
+}
+    </pre>
+  </div>
+
+  <p>Response:</p>
+
+  <div class="code">
+    <pre>
+HTTP/1.1 201 Creted
+
+{
+  "buddies": [
+    {
+      "id": "8d9a37c0-d792-4d8a-be8d-ec28b15824a7",
+      "name": "Matteo Depalo",
+      "image": "http://graph.facebook.com/100002734755203/picture?type=square",
+      "facebook_id": "100002734755203"
+    },
+    {
+      "id": "bc2e662a-1345-4117-834d-2bbdcde06935",
+      "name": "Eugenio Depalo",
+      "image": "http://graph.facebook.com/100002950674984/picture?type=square",
+      "facebook_id": "100002950674984"
+    }
+  ]
+}
+    </pre>
+  </div>
+</section>
