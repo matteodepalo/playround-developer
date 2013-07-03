@@ -1,0 +1,77 @@
+<section id="games">
+  <h2 data-magellan-destination="games">Games</h2>
+
+  <h4>Index</h4>
+  <p>Get the list of games</p>
+
+  <div class="endpoint">
+    <span class="get">GET</span> /v1/games
+  </div>
+
+  <p>Response:</p>
+
+  <div class="code">
+    <pre>
+HTTP/1.1 200 Success
+
+{
+  "games": [
+    {
+      "id": "5b8e7ba6-d2b0-4723-9697-c2eb2f913bd8",
+      "name": "dota2",
+      "display_name": "Dota 2",
+      "image_url": "http://localhost:8080/assets/dota2.jpg",
+      "teams": [
+        {
+          "name": "radiant",
+          "display_name": "Radiant",
+          "number_of_players": 5
+        },
+        {
+          "name": "dire",
+          "display_name": "Dire",
+          "number_of_players": 5
+        }
+      ]
+    },
+    {
+      "id": "0f37a177-fe94-4658-8061-d934a97b7995",
+      "name": "table_football",
+      "display_name": "Table Football",
+      "image_url": "http://localhost:8080/assets/table_football.jpg",
+      "teams": [
+        {
+          "name": "blue",
+          "display_name": "Blue",
+          "number_of_players": 2
+        },
+        {
+          "name": "red",
+          "display_name": "Red",
+          "number_of_players": 2
+        }
+      ]
+    },
+    {
+      "id": "dcd2a1fc-8961-49e2-89eb-ffc5390f96df",
+      "name": "go",
+      "display_name": "Go",
+      "image_url": "http://localhost:8080/assets/go.jpg",
+      "teams": [
+        {
+          "name": "black",
+          "display_name": "Black",
+          "number_of_players": 1
+        },
+        {
+          "name": "white",
+          "display_name": "White",
+          "number_of_players": 1
+        }
+      ]
+    }
+  ]
+}
+    </pre>
+  </div>
+</section>
