@@ -1,0 +1,66 @@
+<section id="arenas">
+  <h2 data-magellan-destination="arenas">Arenas</h2>
+
+  <h4>Index</h4>
+  <p>Get the list of arenas</p>
+
+  <div class="endpoint">
+    <span class="get">GET</span> /v1/arenas
+  </div>
+
+  <h5>Example</h5>
+
+  <p>Response:</p>
+
+  <div class="code">
+    <pre>
+HTTP/1.1 200 Success
+
+{
+  "arenas": [
+    {
+      "id": "09ab4c15-4d68-467c-830e-269a6bb69a35",
+      "name": "Clinton St. Baking Co. & Restaurant",
+      "latitude": 40.721294,
+      "longitude": -73.983994,
+      "foursquare_id": "5104"
+    },
+    {
+      "id": "d1416ca6-d5cf-4483-b252-5521802ec237",
+      "name": null,
+      "latitude": 30,
+      "longitude": 50,
+      "foursquare_id": null
+    }
+  ]
+}
+    </pre>
+  </div>
+
+  <h4>Show</h4>
+  <p>Get informations about a arena</p>
+
+  <div class="endpoint">
+    <span class="get">GET</span> /v1/arenas/:id
+  </div>
+
+  <h5>Example</h5>
+
+  <p>Response:</p>
+
+  <div class="code">
+    <pre>
+HTTP/1.1 200 Success
+
+{
+  "arena": {
+    "id": "b4136c59-8ee0-4663-85f4-0b99c484ac24",
+    "name": "Clinton St. Baking Co. & Restaurant",
+    "latitude": 40.721294,
+    "longitude": -73.983994,
+    "foursquare_id": "5104"
+  }
+}
+    </pre>
+  </div>
+</section>
