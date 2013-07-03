@@ -1,6 +1,91 @@
 <section id="rounds">
   <h2 data-magellan-destination="rounds">Rounds</h2>
 
+  <h4>Index</h4>
+  <p>
+    Get the list of rounds created by the current user.<br/>
+    Requires <span class="authentication">Authentication</span>.
+  </p>
+
+  <div class="endpoint">
+    <span class="get">GET</span> /v1/rounds
+  </div>
+
+  <h5>Example</h5>
+
+  <p>Response:</p>
+
+  <div class="code">
+    <pre>
+HTTP/1.1 200 Success
+
+{
+  "rounds": [
+    {
+      "id": "a858345b-2ab5-43d4-a7e7-c8454a0e5711",
+      "state": "waiting_for_players",
+      "game": {
+        "id": "cd8c94f5-9b4e-406e-91d3-094e11b4ea6a",
+        "name": "dota2",
+        "display_name": "Dota 2",
+        "image_url": "http://localhost:8080/assets/dota2.jpg",
+        "teams": [
+          {
+            "name": "radiant",
+            "display_name": "Radiant",
+            "number_of_players": 5
+          },
+          {
+            "name": "dire",
+            "display_name": "Dire",
+            "number_of_players": 5
+          }
+        ]
+      },
+      "participations": [],
+      "arena": {
+        "id": "ea726daa-0b5b-4c3f-bf4e-e142b5b8ff32",
+        "name": "Clinton St. Baking Co. & Restaurant",
+        "latitude": 40.721294,
+        "longitude": -73.983994,
+        "foursquare_id": "5104"
+      }
+    },
+    {
+      "id": "30626c80-7f70-41e4-9d53-cae639d85473",
+      "state": "waiting_for_players",
+      "game": {
+        "id": "cd8c94f5-9b4e-406e-91d3-094e11b4ea6a",
+        "name": "dota2",
+        "display_name": "Dota 2",
+        "image_url": "http://localhost:8080/assets/dota2.jpg",
+        "teams": [
+          {
+            "name": "radiant",
+            "display_name": "Radiant",
+            "number_of_players": 5
+          },
+          {
+            "name": "dire",
+            "display_name": "Dire",
+            "number_of_players": 5
+          }
+        ]
+      },
+      "participations": [],
+      "arena": {
+        "id": "ea726daa-0b5b-4c3f-bf4e-e142b5b8ff32",
+        "name": "Clinton St. Baking Co. & Restaurant",
+        "latitude": 40.721294,
+        "longitude": -73.983994,
+        "foursquare_id": "5104"
+      }
+    }
+  ]
+}
+    </pre>
+  </div>
+
   <h4>Show</h4>
   <p>Get informations about a round</p>
 
