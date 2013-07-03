@@ -1,0 +1,123 @@
+<section id="participations">
+  <h2 data-magellan-destination="participations">Participations</h2>
+
+  <p>Players can use this endpoint to manage their participation in rounds. They can either join a match (after invitation or not) or leave it.</p>
+
+  <h4>Create</h4>
+  <p>
+    The current user joins the round.<br/>
+    Requires <span class="authentication">Authentication</span>.
+  </p>
+
+  <div class="endpoint">
+    <span class="post">POST</span> /v1/rounds/:round_id/participations
+  </div>
+
+  <h5>Example</h5>
+
+  <p>Response:</p>
+
+  <div class="code">
+    <pre>
+HTTP/1.1 201 Created
+
+{
+  "round": {
+    "id": "9e2c3d41-f256-4642-98dd-cacb0386a749",
+    "state": "waiting_for_players",
+    "game": {
+      "id": "97653b05-d7eb-4b85-88c2-a77b4c98e9cd",
+      "name": "dota2",
+      "display_name": "Dota 2",
+      "image_url": "http://localhost:8080/assets/dota2.jpg",
+      "teams": [
+        {
+          "name": "radiant",
+          "display_name": "Radiant",
+          "number_of_players": 5
+        },
+        {
+          "name": "dire",
+          "display_name": "Dire",
+          "number_of_players": 5
+        }
+      ]
+    },
+    "participations": [
+      {
+        "joined": true,
+        "team": "radiant",
+        "user": {
+          "id": "8b65fa40-9d6d-4dd1-bad8-2b3fa558f3bd",
+          "name": "Test User",
+          "image": "http://graph.facebook.com/1257/picture?type=square",
+          "facebook_id": "1257"
+        }
+      }
+    ],
+    "arena": {
+      "id": "e198d53b-3dbb-4aa3-90cc-a0524916c6ff",
+      "name": "Clinton St. Baking Co. & Restaurant",
+      "latitude": 40.721294,
+      "longitude": -73.983994,
+      "foursquare_id": "5104"
+    }
+  }
+}
+    </pre>
+  </div>
+
+  <h4>Delete</h4>
+
+  <p>
+    The current user leaves the round.<br/>
+    Requires <span class="authentication">Authentication</span>.
+  </p>
+
+  <div class="endpoint">
+    <span class="delete">DELETE</span> /v1/round/:round_id/participations
+  </div>
+
+  <h5>Example</h5>
+
+  <p>Response:</p>
+
+  <div class="code">
+    <pre>
+HTTP/1.1 201 Creted
+
+{
+  "round": {
+    "id": "6202642a-356b-43e9-a494-da48f0466cec",
+    "state": "waiting_for_players",
+    "game": {
+      "id": "925d567b-8f00-49b2-8342-ee266b2d6c9b",
+      "name": "dota2",
+      "display_name": "Dota 2",
+      "image_url": "http://localhost:8080/assets/dota2.jpg",
+      "teams": [
+        {
+          "name": "radiant",
+          "display_name": "Radiant",
+          "number_of_players": 5
+        },
+        {
+          "name": "dire",
+          "display_name": "Dire",
+          "number_of_players": 5
+        }
+      ]
+    },
+    "participations": [],
+    "arena": {
+      "id": "da7ea3c4-404a-4cfc-ad72-c8219efbc467",
+      "name": "Clinton St. Baking Co. & Restaurant",
+      "latitude": 40.721294,
+      "longitude": -73.983994,
+      "foursquare_id": "5104"
+    }
+  }
+}
+    </pre>
+  </div>
+</section>
