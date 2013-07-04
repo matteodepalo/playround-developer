@@ -158,13 +158,19 @@ HTTP/1.1 200 Success
       <tr>
         <td><span class="parameter">arena_attributes</span></td>
         <td>
-          Dictionary containing the properties of the arena which can be either the foursquare_id or the location coordinates:
-          <div class="code">
-            <pre>
+          Dictionary containing the properties of the arena which can be either the foursquare_id or the location coordinates. It can be one of these:
+          <ul>
+            <li>
+              <pre>
 { foursquare_id": "5104" }
+              </pre>
+            </li>
+            <li>
+              <pre>
 { "latitude": 30, "longitude": 50 }
-            </pre>
-          </div>
+              </pre>
+            </li>
+          </ul>
         </td>
       </tr>
 
