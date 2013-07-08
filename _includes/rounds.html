@@ -156,7 +156,7 @@ HTTP/1.1 200 Success
       </tr>
 
       <tr>
-        <td><span class="parameter">arena_attributes</span></td>
+        <td><span class="parameter">arena</span></td>
         <td>
           Dictionary containing the properties of the arena which can be either the foursquare_id or the location coordinates:
           <ul>
@@ -175,7 +175,7 @@ HTTP/1.1 200 Success
       </tr>
 
       <tr>
-        <td><span class="parameter">participation_list</span></td>
+        <td><span class="parameter">participations</span></td>
         <td>
           Array of dictionaries containing the "team" and "user" properties.
 
@@ -198,8 +198,8 @@ HTTP/1.1 200 Success
 {
   "round": {
     "game_name": "dota2",
-    "arena_attributes": { "foursquare_id": "5104" },
-    "participation_list": [
+    "arena": { "foursquare_id": "5104" },
+    "participations": [
       {
         "team": "dire",
         "user": { "id": "c0731481-35d0-47c1-ab84-c0c7b0bef10c" }
