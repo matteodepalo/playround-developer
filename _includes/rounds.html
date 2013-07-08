@@ -42,7 +42,10 @@ HTTP/1.1 200 Success
           }
         ]
       },
-      "participations": [],
+      "teams": [
+        { "name": "radiant", "participations": [] },
+        { "name": "dire", "participations": [] }
+      ],
       "arena": {
         "id": "ea726daa-0b5b-4c3f-bf4e-e142b5b8ff32",
         "name": "Clinton St. Baking Co. & Restaurant",
@@ -72,7 +75,10 @@ HTTP/1.1 200 Success
           }
         ]
       },
-      "participations": [],
+      "teams": [
+        { "name": "radiant", "participations": [] },
+        { "name": "dire", "participations": [] }
+      ],
       "arena": {
         "id": "ea726daa-0b5b-4c3f-bf4e-e142b5b8ff32",
         "name": "Clinton St. Baking Co. & Restaurant",
@@ -110,7 +116,10 @@ HTTP/1.1 200 Success
       "image_url":"http://localhost:8080/assets/dota2.jpg",
       "number_of_teams":2
     },
-    "participations":[],
+    "teams": [
+      { "name": "radiant", "participations": [] },
+      { "name": "dire", "participations": [] }
+    ],
     "arena":{
       "id":"cbdb5137-0111-4eae-b69a-7da34176c6a6",
       "name":"Clinton St. Baking Co. u0026 Restaurant",
@@ -180,7 +189,7 @@ HTTP/1.1 200 Success
           Array of dictionaries containing the "team" and "user" properties.
 
           <ul>
-            <li>"team" is used to decide which team the user will join; if none is provided it will be automatically assigned to the first one avaiable. See the description of games to know which teams you can use.</li>
+            <li>"team" is used to decide which team the user will join and is mandatory. See the description of games to know which teams you can use.</li>
             <li>"user" can contain the Playround id of the user or the facebook_id of a unregistered user, who will be imported into Playround.</li>
           </ul>
 
@@ -199,12 +208,15 @@ HTTP/1.1 200 Success
   "round": {
     "game_name": "dota2",
     "arena": { "foursquare_id": "5104" },
-    "participations": [
+    "teams": [
       {
-        "team": "dire",
-        "user": { "id": "c0731481-35d0-47c1-ab84-c0c7b0bef10c" }
+        "name": "dire",
+        "users": [{ "id": "c0731481-35d0-47c1-ab84-c0c7b0bef10c" }]
       },
-      { "user": { "facebook_id": "100002734755203"} }
+      {
+        "name": "radiant",
+        "users": [{ "facebook_id": "100002734755203"}]
+      }
     ]
   }
 }
@@ -239,26 +251,34 @@ HTTP/1.1 201 Created
         }
       ]
     },
-    "participations": [
+    "teams": [
       {
-        "joined": false,
-        "team": "dire",
-        "user": {
-            "id": "c0731481-35d0-47c1-ab84-c0c7b0bef10c",
-            "name": "Test User",
-            "image": "http://graph.facebook.com/1252/picture?type=square",
-            "facebook_id": "1252"
-        }
+        "name": "radiant",
+        "participations": [
+          {
+            "joined": false,
+            "user": {
+              "id": "36e8699c-bf95-4598-9c63-e857df16ef06",
+              "name": "Matteo Depalo",
+              "image": "http://graph.facebook.com/100002734755203/picture?type=square",
+              "facebook_id": "100002734755203"
+            }
+          }
+        ]
       },
       {
-        "joined": false,
-        "team": "radiant",
-        "user": {
-            "id": "36e8699c-bf95-4598-9c63-e857df16ef06",
-            "name": "Matteo Depalo",
-            "image": "http://graph.facebook.com/100002734755203/picture?type=square",
-            "facebook_id": "100002734755203"
-        }
+        "name": "dire",
+        "participations": [
+          {
+            "joined": false,
+            "user": {
+              "id": "c0731481-35d0-47c1-ab84-c0c7b0bef10c",
+              "name": "Test User",
+              "image": "http://graph.facebook.com/1252/picture?type=square",
+              "facebook_id": "1252"
+            }
+          }
+        ]
       }
     ],
     "arena": {
@@ -354,7 +374,10 @@ HTTP/1.1 200 Success
         }
       ]
     },
-    "participations": [],
+    "teams": [
+      { "name": "radiant", "participations": [] },
+      { "name": "dire", "participations": [] }
+    ],
     "arena": {
       "id": "7a4f2962-ceb7-4f49-85bd-e34c306206ca",
       "name": "Clinton St. Baking Co. & Restaurant",
