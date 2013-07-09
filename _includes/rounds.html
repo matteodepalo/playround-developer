@@ -175,15 +175,14 @@ HTTP/1.1 200 Success
       </tr>
 
       <tr>
-        <td><span class="parameter">participations</span></td>
+        <td><span class="parameter">teams</span></td>
         <td>
-          Array of dictionaries containing the "team" and "user" properties.
+          Array of teams containing the "name" and "users" properties.
 
           <ul>
-            <li>"team" is used to decide which team the user will join and is mandatory. See the description of games to know which teams you can use.</li>
-            <li>"user" can contain the Playround id of the user or the facebook_id of a unregistered user, who will be imported into Playround.</li>
+            <li>"name" is used to decide which team the user will join and it's mandatory. See the description of games to know which teams you can use.</li>
+            <li>"users" is an array of user dictionaries. Each one can contain the Playround id of the user or the facebook_id of a unregistered user, who will be imported into Playround.</li>
           </ul>
-
         </td>
       </tr>
     </tbody>
