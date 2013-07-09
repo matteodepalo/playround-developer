@@ -42,10 +42,7 @@ HTTP/1.1 200 Success
           }
         ]
       },
-      "teams": [
-        { "name": "radiant", "participations": [] },
-        { "name": "dire", "participations": [] }
-      ],
+      "teams": [],
       "arena": {
         "id": "ea726daa-0b5b-4c3f-bf4e-e142b5b8ff32",
         "name": "Clinton St. Baking Co. & Restaurant",
@@ -75,10 +72,7 @@ HTTP/1.1 200 Success
           }
         ]
       },
-      "teams": [
-        { "name": "radiant", "participations": [] },
-        { "name": "dire", "participations": [] }
-      ],
+      "teams": [],
       "arena": {
         "id": "ea726daa-0b5b-4c3f-bf4e-e142b5b8ff32",
         "name": "Clinton St. Baking Co. & Restaurant",
@@ -116,10 +110,7 @@ HTTP/1.1 200 Success
       "image_url":"http://localhost:8080/assets/dota2.jpg",
       "number_of_teams":2
     },
-    "teams": [
-      { "name": "radiant", "participations": [] },
-      { "name": "dire", "participations": [] }
-    ],
+    "teams": [],
     "arena":{
       "id":"cbdb5137-0111-4eae-b69a-7da34176c6a6",
       "name":"Clinton St. Baking Co. u0026 Restaurant",
@@ -207,15 +198,28 @@ HTTP/1.1 200 Success
 {
   "round": {
     "game_name": "dota2",
-    "arena": { "foursquare_id": "5104" },
+    "arena": {
+      "foursquare_id": "5104"
+    },
     "teams": [
       {
-        "name": "dire",
-        "users": [{ "id": "c0731481-35d0-47c1-ab84-c0c7b0bef10c" }]
+        "name": "radiant",
+        "users": [
+          {
+            "id": "571dde2f-5ff7-44a6-a803-f1ac43ba30c6"
+          }
+        ]
       },
       {
-        "name": "radiant",
-        "users": [{ "facebook_id": "100002734755203"}]
+        "name": "dire",
+        "users": [
+          {
+            "facebook_id": "100002950674984"
+          },
+          {
+            "facebook_id": "100002734755203"
+          }
+        ]
       }
     ]
   }
@@ -231,10 +235,10 @@ HTTP/1.1 201 Created
 
 {
   "round": {
-    "id": "4d49cc3b-d55a-4098-8450-73861b504a9b",
+    "id": "4c995fd7-a928-444a-947b-5ad1aa5a65dc",
     "state": "waiting_for_players",
     "game": {
-      "id": "53bfbf84-d3b3-48fa-9857-9545213a797f",
+      "id": "46d128c6-9de3-4ebf-a226-5e4fee401153",
       "name": "dota2",
       "display_name": "Dota 2",
       "image_url": "http://localhost:8080/assets/dota2.jpg",
@@ -251,14 +255,30 @@ HTTP/1.1 201 Created
         }
       ]
     },
+    "arena": {
+      "id": "1b40dee4-5fa7-4c64-8a18-bc19e169fdf2",
+      "name": "Clinton St. Baking Co. & Restaurant",
+      "latitude": 40.721294,
+      "longitude": -73.983994,
+      "foursquare_id": "5104"
+    },
     "teams": [
       {
-        "name": "radiant",
+        "name": "dire",
         "participations": [
           {
             "joined": false,
             "user": {
-              "id": "36e8699c-bf95-4598-9c63-e857df16ef06",
+              "id": "125732fb-60d0-4776-8859-94e75cc89020",
+              "name": "Eugenio Depalo",
+              "image": "http://graph.facebook.com/100002950674984/picture?type=square",
+              "facebook_id": "100002950674984"
+            }
+          },
+          {
+            "joined": false,
+            "user": {
+              "id": "c49d0f86-aca5-4a51-b004-d09276bede3a",
               "name": "Matteo Depalo",
               "image": "http://graph.facebook.com/100002734755203/picture?type=square",
               "facebook_id": "100002734755203"
@@ -267,27 +287,20 @@ HTTP/1.1 201 Created
         ]
       },
       {
-        "name": "dire",
+        "name": "radiant",
         "participations": [
           {
             "joined": false,
             "user": {
-              "id": "c0731481-35d0-47c1-ab84-c0c7b0bef10c",
+              "id": "571dde2f-5ff7-44a6-a803-f1ac43ba30c6",
               "name": "Test User",
-              "image": "http://graph.facebook.com/1252/picture?type=square",
-              "facebook_id": "1252"
+              "image": "http://graph.facebook.com/1214/picture?type=square",
+              "facebook_id": "1214"
             }
           }
         ]
       }
-    ],
-    "arena": {
-      "id": "8d4b8f61-72bb-4d14-8a6d-b8f5db289777",
-      "name": "Clinton St. Baking Co. & Restaurant",
-      "latitude": 40.721294,
-      "longitude": -73.983994,
-      "foursquare_id": "5104"
-    }
+    ]
   }
 }
     </pre>
@@ -374,10 +387,7 @@ HTTP/1.1 200 Success
         }
       ]
     },
-    "teams": [
-      { "name": "radiant", "participations": [] },
-      { "name": "dire", "participations": [] }
-    ],
+    "teams": [],
     "arena": {
       "id": "7a4f2962-ceb7-4f49-85bd-e34c306206ca",
       "name": "Clinton St. Baking Co. & Restaurant",
