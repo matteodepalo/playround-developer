@@ -3,8 +3,8 @@
 
   <h4>Create</h4>
   <p>
-    Determines the winning team of the round. This action can be perfomed only on ongoing rounds. Requires <span class="authentication">Authentication</span> and <span class="authorization">Authorization</span><br/>
-    Only the creator of the round can determine the winner.
+    Declares the winning team of the round. This action can be perfomed only on ongoing rounds. Requires <span class="authentication">Authentication</span> and <span class="authorization">Authorization</span><br/>
+    Only the creator of the round can declare the winner.
   </p>
 
   <div class="endpoint">
@@ -32,138 +32,140 @@
 HTTP/1.1 200 Success
 
 {
-  "round": {
-    "id": "d98b4b0f-feff-45c7-b40a-e7245aafe49f",
-    "state": "over",
-    "game": {
-      "id": "2e96076b-26f6-4a6d-a3d2-3158e18da9a5",
-      "name": "dota2",
-      "display_name": "Dota 2",
-      "image_url": "http://localhost:8080/assets/dota2.jpg",
-      "teams": [
-        {
-          "name": "radiant",
-          "display_name": "Radiant",
-          "number_of_players": 5
-        },
-        {
-          "name": "dire",
-          "display_name": "Dire",
-          "number_of_players": 5
-        }
-      ]
-    },
-    "arena": {
-      "id": "8968a989-ccb9-4e32-833c-69ea6174ac43",
-      "name": "Clinton St. Baking Co. & Restaurant",
-      "latitude": 40.721294,
-      "longitude": -73.983994,
-      "foursquare_id": "5104"
-    },
-    "teams": [
-      {
-        "name": "dire",
-        "winner": false,
-        "participations": [
+  "winning": {
+    "round": {
+      "id": "d98b4b0f-feff-45c7-b40a-e7245aafe49f",
+      "state": "over",
+      "game": {
+        "id": "2e96076b-26f6-4a6d-a3d2-3158e18da9a5",
+        "name": "dota2",
+        "display_name": "Dota 2",
+        "image_url": "http://localhost:8080/assets/dota2.jpg",
+        "teams": [
           {
-            "joined": false,
-            "user": {
-              "id": "bbec5056-75b5-4030-8bf6-6d84924a40ee",
-              "name": "Test User",
-              "image": "http://graph.facebook.com/1249/picture?type=square",
-              "facebook_id": "1249"
-            }
+            "name": "radiant",
+            "display_name": "Radiant",
+            "number_of_players": 5
           },
           {
-            "joined": false,
-            "user": {
-              "id": "40d3a5e5-09b3-4300-b21e-19ea17a5d4ae",
-              "name": "Test User",
-              "image": "http://graph.facebook.com/1250/picture?type=square",
-              "facebook_id": "1250"
-            }
-          },
-          {
-            "joined": false,
-            "user": {
-              "id": "7222715b-0f16-4c20-ac6e-57244dea1e5e",
-              "name": "Test User",
-              "image": "http://graph.facebook.com/1251/picture?type=square",
-              "facebook_id": "1251"
-            }
-          },
-          {
-            "joined": false,
-            "user": {
-              "id": "1bb8d54d-fa65-47e1-bf09-dcbc6737c80a",
-              "name": "Test User",
-              "image": "http://graph.facebook.com/1252/picture?type=square",
-              "facebook_id": "1252"
-            }
-          },
-          {
-            "joined": false,
-            "user": {
-              "id": "a6db5d91-c7b6-4f07-b4db-a55dfa339bf7",
-              "name": "Test User",
-              "image": "http://graph.facebook.com/1253/picture?type=square",
-              "facebook_id": "1253"
-            }
+            "name": "dire",
+            "display_name": "Dire",
+            "number_of_players": 5
           }
         ]
       },
-      {
-        "name": "radiant",
-        "winner": true,
-        "participations": [
-          {
-            "joined": false,
-            "user": {
-              "id": "48dc1961-9c27-499d-bc60-36016c5d853a",
-              "name": "Test User",
-              "image": "http://graph.facebook.com/1244/picture?type=square",
-              "facebook_id": "1244"
+      "arena": {
+        "id": "8968a989-ccb9-4e32-833c-69ea6174ac43",
+        "name": "Clinton St. Baking Co. & Restaurant",
+        "latitude": 40.721294,
+        "longitude": -73.983994,
+        "foursquare_id": "5104"
+      },
+      "teams": [
+        {
+          "name": "dire",
+          "winner": false,
+          "participations": [
+            {
+              "joined": false,
+              "user": {
+                "id": "bbec5056-75b5-4030-8bf6-6d84924a40ee",
+                "name": "Test User",
+                "image": "http://graph.facebook.com/1249/picture?type=square",
+                "facebook_id": "1249"
+              }
+            },
+            {
+              "joined": false,
+              "user": {
+                "id": "40d3a5e5-09b3-4300-b21e-19ea17a5d4ae",
+                "name": "Test User",
+                "image": "http://graph.facebook.com/1250/picture?type=square",
+                "facebook_id": "1250"
+              }
+            },
+            {
+              "joined": false,
+              "user": {
+                "id": "7222715b-0f16-4c20-ac6e-57244dea1e5e",
+                "name": "Test User",
+                "image": "http://graph.facebook.com/1251/picture?type=square",
+                "facebook_id": "1251"
+              }
+            },
+            {
+              "joined": false,
+              "user": {
+                "id": "1bb8d54d-fa65-47e1-bf09-dcbc6737c80a",
+                "name": "Test User",
+                "image": "http://graph.facebook.com/1252/picture?type=square",
+                "facebook_id": "1252"
+              }
+            },
+            {
+              "joined": false,
+              "user": {
+                "id": "a6db5d91-c7b6-4f07-b4db-a55dfa339bf7",
+                "name": "Test User",
+                "image": "http://graph.facebook.com/1253/picture?type=square",
+                "facebook_id": "1253"
+              }
             }
-          },
-          {
-            "joined": false,
-            "user": {
-              "id": "7c86060d-d5db-499b-9cf3-642b3bb057ae",
-              "name": "Test User",
-              "image": "http://graph.facebook.com/1245/picture?type=square",
-              "facebook_id": "1245"
+          ]
+        },
+        {
+          "name": "radiant",
+          "winner": true,
+          "participations": [
+            {
+              "joined": false,
+              "user": {
+                "id": "48dc1961-9c27-499d-bc60-36016c5d853a",
+                "name": "Test User",
+                "image": "http://graph.facebook.com/1244/picture?type=square",
+                "facebook_id": "1244"
+              }
+            },
+            {
+              "joined": false,
+              "user": {
+                "id": "7c86060d-d5db-499b-9cf3-642b3bb057ae",
+                "name": "Test User",
+                "image": "http://graph.facebook.com/1245/picture?type=square",
+                "facebook_id": "1245"
+              }
+            },
+            {
+              "joined": false,
+              "user": {
+                "id": "1631b2f0-0ff9-4970-8321-82ea3a41e51f",
+                "name": "Test User",
+                "image": "http://graph.facebook.com/1246/picture?type=square",
+                "facebook_id": "1246"
+              }
+            },
+            {
+              "joined": false,
+              "user": {
+                "id": "3ef33094-1ae1-48bc-97e5-b3f946d69098",
+                "name": "Test User",
+                "image": "http://graph.facebook.com/1247/picture?type=square",
+                "facebook_id": "1247"
+              }
+            },
+            {
+              "joined": false,
+              "user": {
+                "id": "046e4106-cde3-4435-a498-e5cbff78fa27",
+                "name": "Test User",
+                "image": "http://graph.facebook.com/1248/picture?type=square",
+                "facebook_id": "1248"
+              }
             }
-          },
-          {
-            "joined": false,
-            "user": {
-              "id": "1631b2f0-0ff9-4970-8321-82ea3a41e51f",
-              "name": "Test User",
-              "image": "http://graph.facebook.com/1246/picture?type=square",
-              "facebook_id": "1246"
-            }
-          },
-          {
-            "joined": false,
-            "user": {
-              "id": "3ef33094-1ae1-48bc-97e5-b3f946d69098",
-              "name": "Test User",
-              "image": "http://graph.facebook.com/1247/picture?type=square",
-              "facebook_id": "1247"
-            }
-          },
-          {
-            "joined": false,
-            "user": {
-              "id": "046e4106-cde3-4435-a498-e5cbff78fa27",
-              "name": "Test User",
-              "image": "http://graph.facebook.com/1248/picture?type=square",
-              "facebook_id": "1248"
-            }
-          }
-        ]
-      }
-    ]
+          ]
+        }
+      ]
+    }
   }
 }
     </pre>
