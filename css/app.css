@@ -7047,22 +7047,17 @@ a.th {
 
 /* Literal.Number.Integer.Long */
 /* line 51, ../sass/app.scss */
-h4, h5 {
-  font-family: "Whitney SSm A", "Whitney SSm B";
-}
-
-/* line 55, ../sass/app.scss */
 ul {
   margin-top: 10px;
   margin-left: 18px;
 }
 
-/* line 61, ../sass/app.scss */
+/* line 57, ../sass/app.scss */
 table .code {
   margin-top: 10px;
 }
 
-/* line 66, ../sass/app.scss */
+/* line 62, ../sass/app.scss */
 .get {
   font-weight: bold;
   text-align: center;
@@ -7079,7 +7074,7 @@ table .code {
   border-radius: 1000px;
 }
 
-/* line 70, ../sass/app.scss */
+/* line 66, ../sass/app.scss */
 .post {
   font-weight: bold;
   text-align: center;
@@ -7096,7 +7091,7 @@ table .code {
   border-radius: 1000px;
 }
 
-/* line 74, ../sass/app.scss */
+/* line 70, ../sass/app.scss */
 .delete {
   font-weight: bold;
   text-align: center;
@@ -7113,7 +7108,7 @@ table .code {
   border-radius: 1000px;
 }
 
-/* line 78, ../sass/app.scss */
+/* line 74, ../sass/app.scss */
 .patch {
   font-weight: bold;
   text-align: center;
@@ -7130,7 +7125,7 @@ table .code {
   border-radius: 1000px;
 }
 
-/* line 82, ../sass/app.scss */
+/* line 78, ../sass/app.scss */
 .authentication {
   font-weight: bold;
   text-align: center;
@@ -7147,7 +7142,7 @@ table .code {
   border-radius: 1000px;
 }
 
-/* line 86, ../sass/app.scss */
+/* line 82, ../sass/app.scss */
 .authorization {
   font-weight: bold;
   text-align: center;
@@ -7164,7 +7159,7 @@ table .code {
   border-radius: 1000px;
 }
 
-/* line 90, ../sass/app.scss */
+/* line 86, ../sass/app.scss */
 .parameter {
   font-weight: bold;
   text-align: center;
@@ -7179,7 +7174,7 @@ table .code {
   color: #333333;
 }
 
-/* line 94, ../sass/app.scss */
+/* line 90, ../sass/app.scss */
 .code, .endpoint {
   border-style: solid;
   border-width: 1px;
@@ -7210,7 +7205,7 @@ table .code {
   line-height: 1.4;
 }
 
-/* line 98, ../sass/app.scss */
+/* line 94, ../sass/app.scss */
 .code {
   font-size: 1em;
   word-wrap: break-word;
