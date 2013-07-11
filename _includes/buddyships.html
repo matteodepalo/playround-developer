@@ -1,0 +1,73 @@
+<section id="buddyships">
+  <h3 data-magellan-destination="buddyships">Buddyships</h3>
+
+  <h4>Create</h4>
+  <p>
+    Adds one or more users to the list of current user's buddies.<br/>
+    Requires <span class="authentication">Authentication</span>
+  </p>
+
+  <div class="endpoint">
+    <span class="post">POST</span> /v1/users/me/buddyships
+  </div>
+
+  <h5>Example</h5>
+
+  <p>Request body:</p>
+
+  <div class="code">
+    <pre>
+{
+  "buddyships": [
+    {
+      "facebook_id": "100002734755203"
+    },
+    {
+      "facebook_id": "100002950674984"
+    }
+  ]
+}
+    </pre>
+  </div>
+
+  <p>Response:</p>
+
+  <div class="code">
+    <pre>
+HTTP/1.1 201 Created
+
+{
+  "buddyships": [
+    {
+      "user": {
+        "id": "18613a9d-7d01-4382-a2d5-7a3be450a555",
+        "name": "Test User",
+        "image": "http://graph.facebook.com/1269/picture?type=square",
+        "facebook_id": "1269"
+      },
+      "buddy": {
+        "id": "2371e6bc-0a58-4ae2-a453-ef6b5c84b87f",
+        "name": "Matteo Depalo",
+        "image": "http://graph.facebook.com/100002734755203/picture?type=square",
+        "facebook_id": "100002734755203"
+      }
+    },
+    {
+      "user": {
+        "id": "18613a9d-7d01-4382-a2d5-7a3be450a555",
+        "name": "Test User",
+        "image": "http://graph.facebook.com/1269/picture?type=square",
+        "facebook_id": "1269"
+      },
+      "buddy": {
+        "id": "cfe8cf6b-b889-4850-af7a-d6e195da2ce5",
+        "name": "Eugenio Depalo",
+        "image": "http://graph.facebook.com/100002950674984/picture?type=square",
+        "facebook_id": "100002950674984"
+      }
+    }
+  ]
+}
+    </pre>
+  </div>
+</section>
