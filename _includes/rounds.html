@@ -89,6 +89,29 @@ HTTP/1.1 200 Success
   <h4>Show</h4>
   <p>Get informations about a round</p>
 
+  <p>Fields:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Field</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parameter">state</span></td>
+        <td>The round's state. It can be among these:
+          <ul>
+            <li>waiting_for_players</li>
+            <li>ongoing</li>
+            <li>over</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
   <div class="endpoint">
     <span class="get">GET</span> /v1/rounds/:id
   </div>
